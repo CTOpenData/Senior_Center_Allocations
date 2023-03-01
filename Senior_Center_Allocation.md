@@ -1,4 +1,4 @@
-## Senior Center Allocations Dataset Creation
+# Senior Center ARPA Allocation Dataset Creation
 
 #### Installing and Loading Packages
 

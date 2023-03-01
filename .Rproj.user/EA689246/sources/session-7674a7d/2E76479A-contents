@@ -7,7 +7,7 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## Senior Center ARPA Allocation Dataset Creation
+# Senior Center ARPA Allocation Dataset Creation
 
 #### Installing and Loading Packages  
 Run: install.packages("tidycensus","tidyverse","dplyr") if packages are not already installed
