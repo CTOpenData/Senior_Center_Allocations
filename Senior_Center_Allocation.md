@@ -191,6 +191,3 @@ Tables Used:
       mutate(rural_estimate_60_over = share_rural * pop_60_over) %>%
       mutate(urban_estimate_65_over = share_urban * pop_65_over) %>%
       mutate(rural_estimate_65_over = share_rural * pop_65_over)
-
-    write.csv(ct_aging_pop,
-              "//opm-fs102/UserRedirections/WonderlyC/Documents/Senior_Center_Demographics.csv",row.names = FALSE)

@@ -188,7 +188,7 @@ ct_aging_pop <- ct_aging_pop %>%
   mutate(rural_estimate_65_over = share_rural * pop_65_over)
 ```
 
-```{r, results='hide'}
+```{r, include=FALSE}
 write.csv(ct_aging_pop,
           "//opm-fs102/UserRedirections/WonderlyC/Documents/Senior_Center_Demographics.csv",row.names = FALSE)
 ```
