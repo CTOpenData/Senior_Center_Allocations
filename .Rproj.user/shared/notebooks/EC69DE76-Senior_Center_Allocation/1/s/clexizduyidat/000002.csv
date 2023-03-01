@@ -1,0 +1,20 @@
+"0","```r
+rural_urban <- read_csv(\"//opm-fs102/UserRedirections/WonderlyC/Downloads/DECENNIALSF12010.P2-Data.csv\")
+
+#Cleaning file and calculating share urban and rural
+rural_urban <- rural_urban %>%
+  mutate(share_rural = `Total!!Rural`/Total) %>%
+  mutate(share_urban = `Total!!Urban`/Total) %>%
+  rename(Town = `Geographic Area Name`) %>% 
+  filter(!grepl('County subdivisions not defined', Town)) %>%
+  mutate(Town = gsub(\" town.*$\",\"\", Town)) %>%
+  select(-c(Geography, Total:`Total!!Not defined for this file`))
+  
+#Adding the urban and rural shares to the aging population file and calculating the estimates rural and urban by population for 60 and over and 65 and over
+ct_aging_pop <- merge(ct_aging_pop,rural_urban,by=\"Town\")
+ct_aging_pop <- ct_aging_pop %>%
+  mutate(urban_estimate_60_over = share_urban * pop_60_over) %>%
+  mutate(rural_estimate_60_over = share_rural * pop_60_over) %>%
+  mutate(urban_estimate_65_over = share_urban * pop_65_over) %>%
+  mutate(rural_estimate_65_over = share_rural * pop_65_over)
+```"
