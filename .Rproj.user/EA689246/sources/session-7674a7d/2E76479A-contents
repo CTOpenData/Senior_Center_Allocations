@@ -1,8 +1,7 @@
 ---
 title: "Senior Center Allocations Dataset Creation"
 output:
-  html_document: default
-  html_notebook: default
+  md_document: default
 ---
 
 ```{r setup, include=FALSE}
