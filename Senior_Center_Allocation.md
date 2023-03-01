@@ -14,7 +14,7 @@ not already installed
 If installing api key for the first time, also run
 readRenviron(“~/.Renviron”) to save to your environment
 
-    #census_api_key("INSERT YOUR KEY")
+    census_api_key("INSERT YOUR KEY")
 
 #### Pulling and cleaning data from Census/ACS
 
