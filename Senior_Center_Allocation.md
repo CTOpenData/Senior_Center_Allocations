@@ -164,13 +164,6 @@ Tables Used:
                 female_above_poverty
                 ))
 
-    ## Warning: • You have not set a Census API key. Users without a key are limited to 500
-    ## queries per day and may experience performance limitations.
-    ## ℹ For best results, get a Census API key at
-    ## http://api.census.gov/data/key_signup.html and then supply the key to the
-    ## `census_api_key()` function to use it throughout your tidycensus session.
-    ## This warning is displayed once per session.
-
 ##### Loading in the Census Rural Designation file
 
     rural_urban <- read_csv("//opm-fs102/UserRedirections/WonderlyC/Downloads/DECENNIALSF12010.P2-Data.csv")
